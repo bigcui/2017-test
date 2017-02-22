@@ -24,6 +24,27 @@
     document.addEventListener('keyup',function(e){
          obj.hello = e.target.value;
     });
+     /* Vue.js最核心的功能有两个，一是响应式的数据绑定系统，二是组件系统。
+
+一、访问器属性：Object.defineProperty
+
+ECMAScript 262v5带来的新东西，FF把它归入为javaScript 1.8.5的功能之一。
+
+语法：Object.defineProperty(obj, prop, descriptor)
+
+参数：obj:目标对象；prop:需要定义的属性或方法的名字；descriptor:目标属性所拥有的特性。
+
+可供定义的特性列表：
+
+value:属性的值
+writable:如果为false，属性的值就不能被重写。
+get: 一旦目标属性被访问就会调回此方法，并将此方法的运算结果返回用户。
+set:一旦目标属性被赋值，就会调回此方法。
+configurable:如果为false，则任何尝试删除目标属性或修改属性以下特性（writable, configurable, enumerable）的行为将被无效化。
+enumerable:是否能在for...in循环中遍历出来或在Object.keys中列举出来。
+说明：Object.defineProperty() 方法设置属性时，属性不能同时声明访问器属性（ set 和 get ）和 writable 或者 value 属性。 意思就是，某个属性设置了 writable 或者 value 属性，那么这个属性就不能声明 get 和 set 了，反之亦然。
+
+因为 Object.defineProperty() 在声明一个属性时，不允许同一个属性出现两种以上存取访问控制。*/
 </script>
 </body>
 </html>
